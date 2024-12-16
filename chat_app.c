@@ -1,13 +1,15 @@
+#include <winsock2.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <winsock2.h>
+
 #include <ctype.h>
 
 #pragma comment(lib, "ws2_32.lib") // Link Winsock library
 
 #define PORT 8080
 #define BUFFER_SIZE 1024
+#define NI_MAXHOST 1025
 
 WSADATA wsa;
 SOCKET client_sock;
